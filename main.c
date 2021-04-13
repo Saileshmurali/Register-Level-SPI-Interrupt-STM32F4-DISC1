@@ -70,7 +70,6 @@ void ADXL_Config(void)
 	// Configuring the data format register
 	Accel_Write(0x2E,0x80);//Enable interrupt for data ready
 	Accel_Write(0x2F,0x80);//Interrupts in INT2 pin
-	//The 5th bit corresponds to setting interrupt to active low if set
 	Accel_Write(0x31,0x01);//Lower nibble:Selecting +/- 4g range and 4 wire SPI mode
 	//Configuring sampling rate to 100hz
 	Accel_Write(0x2C,0x0A);
